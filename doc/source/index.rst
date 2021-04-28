@@ -22,9 +22,9 @@ amovcar 文档
    :caption: 无人车基础
 
    无人车产品介绍 <docs/bases/无人车产品介绍>
-   Mission Planner地面站介绍 <docs/bases/Mission Planner地面站介绍>
-   遥控器介绍 <docs/bases/遥控器介绍>
    硬件模块介绍 <docs/bases/硬件模块介绍>
+   遥控器介绍 <docs/bases/遥控器介绍>
+   Mission Planner地面站介绍 <docs/bases/Mission Planner地面站介绍>
 
 
 .. toctree::
