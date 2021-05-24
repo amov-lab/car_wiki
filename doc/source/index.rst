@@ -40,11 +40,11 @@ amovcar 文档
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption:   S100
+   :caption:   R300
 
-   硬件框架介绍 <docs/S100/硬件框架介绍>
-   软件框架介绍 <docs/S100/软件框架介绍>
-   操作流程 <docs/S100/操作流程>
-   常见问题处理 <docs/S100/常见问题处理>
+   硬件框架介绍 <docs/R300/硬件框架介绍>
+   软件框架介绍 <docs/R300/软件框架介绍>
+   操作流程 <docs/R300/操作流程>
+   常见问题处理 <docs/R300/常见问题处理>
 
 
