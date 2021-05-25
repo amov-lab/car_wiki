@@ -26,7 +26,7 @@ NoMachine远程连接X86电脑失败
 
 首先确认，无人车X86板载计算机的HDMI口是否有插上“欺骗器"
 
-.. image:: ../../images/S100/S100-HDMI.jpg
+.. image:: ../../images/R300/R300-HDMI.jpg
 
 如果是插上后依然连不上，需要确认无人车X86电脑是否连接上数传提供的Wifi以及ip是否能ping通
 
