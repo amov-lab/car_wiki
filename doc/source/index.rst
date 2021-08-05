@@ -25,6 +25,7 @@ amovcar 文档
    硬件模块介绍 <docs/bases/硬件模块介绍>
    遥控器介绍 <docs/bases/遥控器介绍>
    Mission Planner地面站介绍 <docs/bases/Mission Planner地面站介绍>
+   无人车软件文件结构 <docs/bases/无人车软件文件结构>
 
 
 .. toctree::
