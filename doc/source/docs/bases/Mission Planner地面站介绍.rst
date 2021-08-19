@@ -168,8 +168,9 @@ Mission Planner是一款Windows系统下的软件，简称MP地面站，主要�
     :alt: None
     :align: center
 
-|          左摇杆打到最左/左摇杆打到最右（方向、航向、偏航：机头指向，正向为正确）,右摇杆打到最
+|       左摇杆打到最左/左摇杆打到最右（方向、航向、偏航：机头指向，正向为正确）,右摇杆打到最
 |       左侧/右摇杆打到最右侧（副翼-横滚，正向为正确）
+
 .. image:: ../../images/bases/calibration_FS_3.png
     :height: 850px
     :width: 1100px
