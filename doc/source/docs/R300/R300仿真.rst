@@ -108,10 +108,10 @@ OctoMap三维建图功能
 .. image:: ../../images/R300/R300-sim_octomap_3.png
 
 
-SLAM二维建图功能
----------------------
+SLAM二维建图功能(Gmapping)
+----------------------------
 
-启动的sh脚本为amovcar/src/R300/r300_simulation/sh/r300_simulation_slam.sh，该sh文件包含以下部分：
+启动的sh脚本为amovcar/src/R300/r300_simulation/sh/r300_simulation_slam_gmapping.sh，该sh文件包含以下部分：
 
 1、ros主节点的启动
 
@@ -123,7 +123,7 @@ SLAM二维建图功能
 
 5、rviz可视化界面，该界面为针对SLAM二维建图功能设置，显示地图以及无人车模型等内容。
 
-任意打开一个终端，将r300_simulation_slam.sh文件拖入终端窗口内，便会出现启动该sh脚本的命令，按下回车启动即可。
+任意打开一个终端，将r300_simulation_slam_gmapping.sh文件拖入终端窗口内，便会出现启动该sh脚本的命令，按下回车启动即可。
 
 检查弹出的终端窗口，检测每个终端中的节点是否均正常启动。确认节点运行正常后，在第三个键盘控制的终端内输入相应控制指令控制无人车移动进行二维建图。
 
@@ -145,3 +145,42 @@ SLAM二维建图功能
 
 .. image:: ../../images/R300/R300-sim_slam_4.png
 
+
+SLAM二维建图功能(Cartographer)
+-------------------------------
+
+启动的sh脚本为amovcar/src/R300/r300_simulation/sh/r300_simulation_slam_cartographer.sh，该sh文件包含以下部分：
+
+1、ros主节点的启动
+
+2、r300仿真启动，包含仿真环境，无人车模型以及传感器仿真，TF等内容
+
+3、键盘控制节点，控制无人车移动
+
+4、二维建图功能，主要使用二维激光雷达数据进行建图
+
+5、rviz可视化界面，该界面为针对SLAM二维建图功能设置，显示地图以及无人车模型等内容。
+
+任意打开一个终端，将r300_simulation_slam_cartographer.sh文件拖入终端窗口内，便会出现启动该sh脚本的命令，按下回车启动即可。
+
+检查弹出的终端窗口，检测每个终端中的节点是否均正常启动。确认节点运行正常后，在第五个键盘控制的终端内输入相应控制指令控制无人车移动进行二维建图。
+
+如下图所示
+
+.. image:: ../../images/R300/r300_cartpgrapher_sim_1.png
+
+当建图完成以后，使用脚本文件 /home/amov/amovcar/src/R300/r300_simulation/sh/r300_cartographer_map_save.sh 进行地图保存
+
+具体执行的命令为
+
+``roscd r300_simulation/sh``
+``bash r300_cartographer_map_save.sh``
+
+.. hint:: 
+    1. 该脚本将地图默认保存在 /home/amov/amovcar/src/R300/r300_simulation/maps/ 下。地图的默认名称为 sim_map
+    2. 使用脚本保存地图会覆盖上一次的地图文件。如果需要多次仿真建图对比，将每次保存的地图单独放在一个文件夹中。
+    3. 如果不想保存在默认位置，打开脚本。修改文件路径即可。
+
+仿真构建好的地图如下：
+
+.. image:: ../../images/R300/r300_cartographer_sim_2.png

@@ -3,12 +3,12 @@ amovcar文件结构
 
 
 amovcar文件结构图
--------------
+-------------------
 
 .. image:: ../../images/bases/amovcar_filesystem.png
 
 amovcar文件结构描述
-----------
+-------------------
 
 .. tip::
 

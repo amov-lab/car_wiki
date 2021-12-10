@@ -140,14 +140,43 @@ RTK定位
 
 6.正常情况下，各节点启动均正常，能看到rviz中显示的地图
 
-7.通过遥控器控制无人车进行移动，建好区域的地图后，输入以下命令保存地图
+7.通过遥控器控制无人车进行移动，建好区域的地图后，找到桌面上的sh文件夹，输入以下命令保存地图
 
-``rosrun map_server map_saver -f map_name``
+``bash r300_cartographer_map_save.sh``
 
 .. tip::
-    命令中map_name为保存的地图相关文件名，会生成一个pgm和yaml格式文件
+    1. 该脚本将地图默认保存在 /home/amov/amovcar/src/R300/r300_function/maps/ 下。地图的默认名称为 r300_map
+    2. 使用脚本保存地图会覆盖上一次的地图文件。如果需要多次仿真建图对比，将每次保存的地图单独放在一个文件夹中。
+    3. 如果不想保存在默认位置，打开脚本。修改文件路径即可。
 
-    文件会被保存在输入命令的终端所在文件夹路径下
+
+二维建图Demo
+-----------------
+
+
+R300提供了一个简单的Cartographer纯激光建图的Demo，其bag文件放在 /home/amov/amovcar/src/R300/r300_function/bag/pure_slam.bag 
+
+可以通过这个bag，对Cartographer的配置文件进行配置，从而进行建图的调试。具体的操作流程如下：
+
+``roslaunch r300_function r300_cartographer_demo.launch bag_filename:=/home/amov/amovcar/src/R300/r300_function/bag/pure_slam.bag``
+
+当然，你也可以选择播放自己的bag文件，然后通过修改配置文件，查看不同的建图效果
+
+当bag播放完毕，使用以下命令保存地图
+
+``roscd r300_function/demo_map``
+
+``bash map_save.sh``
+
+.. tip::
+    1. 该脚本将地图默认保存在 /home/amov/amovcar/src/R300/r300_function/demo_map/ 下。地图的默认名称为 demo_map
+    2. 使用脚本保存地图会覆盖上一次的地图文件。如果需要多次仿真建图对比，将每次保存的地图单独放在一个文件夹中。
+    3. 如果不想保存在默认位置，打开脚本。修改文件路径即可。
+
+下图为该bag的建图结果
+
+.. image:: ../../images/R300/demo_map.png
+
 
 三维建图
 ---------------
